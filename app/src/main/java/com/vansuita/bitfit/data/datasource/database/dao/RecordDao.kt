@@ -15,6 +15,10 @@ interface RecordDao {
 	@Delete
 	fun delete(record: Record)
 
+
+	@Query("DELETE FROM record")
+	fun deleteAll()
+
 	@Query("SELECT * FROM record")
 	fun getAll(): List<Record>
 }

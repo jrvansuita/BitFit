@@ -1,4 +1,4 @@
-package com.vansuita.bitfit.ui
+package com.vansuita.bitfit.ui.list
 
 
 import android.view.LayoutInflater
@@ -21,7 +21,7 @@ class ListAdapter(private val onLongClick: (record: Record) -> Unit) :
 		fun bind(record: Record) {
 			binding.date.text = record.date.asDate()
 			binding.note.text = record.note
-			binding.feeling.text = binding.root.context.getString(R.string.feeling, record.felling)
+			binding.feeling.text = binding.root.context.getString(R.string.feeling, record.feeling)
 			binding.hours.text = binding.root.context.getString(R.string.hours_slept, record.hours)
 			binding.root.setOnLongClickListener {
 				onLongClick(record)
@@ -46,15 +46,9 @@ class ListAdapter(private val onLongClick: (record: Record) -> Unit) :
 		holder.bind(data[position])
 	}
 
-	fun add(vararg records: Record) {
-		val lastPosition = Integer.max(0, itemCount - 1)
+	fun setup(records: List<Record>) {
+		data.clear()
 		data.addAll(records)
-		notifyItemRangeInserted(lastPosition, records.size)
-	}
-
-	fun delete(record: Record) {
-		data.remove(record)
 		notifyDataSetChanged()
 	}
-
 }

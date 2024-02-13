@@ -9,5 +9,5 @@ data class Record(
 	@PrimaryKey @ColumnInfo(name = "date") val date: Long,
 	@ColumnInfo(name = "note") val note: String,
 	@ColumnInfo(name = "hours") val hours: Int,
-	@ColumnInfo(name = "feeling") val felling: Int,
+	@ColumnInfo(name = "feeling") val feeling: Int,
 )

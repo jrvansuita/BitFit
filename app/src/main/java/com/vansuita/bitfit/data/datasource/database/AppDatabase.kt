@@ -27,7 +27,7 @@ abstract class AppDatabase : RoomDatabase() {
 						context.applicationContext,
 						AppDatabase::class.java, "record.db"
 					)
-						.allowMainThreadQueries()
+						//.allowMainThreadQueries()
 						.build()
 				}
 			}

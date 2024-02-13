@@ -7,8 +7,12 @@
     <string name="notes">Notes</string>
     <string name="save">Save</string>
 
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+
     <string name="hours_slept">Slept %d hours</string>
     <string name="feeling">Feeling %d/10</string>
     <string name="average_hours_of_sleep">Avarage hours of sleep %d</string>
     <string name="average_feeling">Average feeling %d/10</string>
+    <string name="clear_data">Clear Data</string>
 </resources>

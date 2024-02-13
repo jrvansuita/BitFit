@@ -41,11 +41,18 @@ android {
 }
 
 dependencies {
+	implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
+	implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
 	val roomVersion = "2.6.1"
 
 	implementation("androidx.room:room-runtime:$roomVersion")
 	kapt("androidx.room:room-compiler:$roomVersion")
 	api("androidx.activity:activity-ktx:1.8.2")
+
+	implementation("com.google.android.material:material:1.11.0")
+	implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
+
 
 	implementation("androidx.core:core-ktx:1.12.0")
 	implementation("androidx.appcompat:appcompat:1.6.1")
